@@ -1,86 +1,85 @@
-⚡ MockMate Ultra: AI Technical Interviewer
+# ⚡ MockMate: AI Technical Interviewer
 
-MockMate Ultra is a Next-Gen Technical Interview platform powered by Generative AI. Unlike static quiz apps, MockMate reads your resume in real-time and generates context-aware questions tailored to your specific tech stack and experience level.
+**Master your technical interview with an AI engine that adapts to your resume and grills you like a Senior Engineer.**
 
-🚀 Live Demo
+### 🚀 Live Demo
+👉 **[Click here to try MockMate Live](https://mockmate.streamlit.app/)**
 
-👉 Click here to try the App
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-🧠 How It Works
+---
 
-The application uses a RAG (Retrieval-Augmented Generation) style approach combined with Dynamic Prompt Engineering:
+## 🧐 The Problem
+Technical interviews are stressful.
+* **Static Quizzes** (LeetCode/MCQs) don't test your ability to *explain* concepts.
+* **Mock Interviews** with humans are expensive or hard to schedule.
+* Most tools ask generic questions, ignoring your specific tech stack.
 
-Resume Parsing: Extracts raw text from uploaded PDF resumes using PyPDF2.
+## 💡 The Solution
+MockMate is a **Generative AI Platform** powered by **Google Gemini 2.0 Flash**.
+1.  **Context-Aware:** It reads your PDF resume to understand *your* specific skills (e.g., if you know React, it asks about Hooks; if you know Java, it asks about JVM).
+2.  **Adaptive Difficulty:** You can choose your level—from **Intern** to **System Architect**.
+3.  **Instant Feedback:** It grades your answers (0/10) and provides the "Ideal Answer" instantly.
 
-Context Injection: Feeds the resume text + selected difficulty level into Google Gemini 2.0 Flash.
+---
 
-Question Generation: Creates 3 unique questions (System Design, DSA, or Behavioral) based on the candidate's profile.
+## 📸 Features
 
-AI Grading: Evaluates the candidate's typed answers, providing a Compatibility Score (0-10) and "Ideal Model Answers".
+### 1. Multi-Level Intelligence
+Choose your challenge level:
+* 🟢 **Intern / Fresher:** OOPs, Basic Definitions.
+* 🟡 **Data Structures:** Time Complexity, Logic.
+* 🔴 **System Design:** Scalability, Load Balancing (Senior level).
+* 🔵 **Behavioral:** STAR Method questions.
 
-💎 Key Features
+### 2. Glassmorphism UI
+Built with a custom CSS engine injected into Streamlit to provide a **Dark Mode, Glass-morphic** aesthetic that feels premium and modern.
 
-✨ Cyber-Aesthetic UI: A fully custom "Glassmorphism" interface built with CSS injection (Animated backgrounds, Neon accents, Glass cards).
+### 3. Smart Grading
+The AI acts as a "Strict Interviewer." It doesn't just check keywords; it evaluates clarity, depth, and technical accuracy.
 
-🎚️ Multi-Level Difficulty:
+---
 
-Intern/Fresher (Basic Concepts)
+## 🛠️ Tech Stack
+* **LLM Engine:** Google Gemini 2.0 Flash (`google-generativeai`)
+* **Frontend:** Streamlit (Python)
+* **PDF Parsing:** PyPDF2
+* **Hosting:** Streamlit Community Cloud
 
-System Design (Scalability & Architecture)
+---
 
-Database Specialist (SQL & ACID)
+## ⚙️ How to Run Locally
 
-Behavioral (HR/Leadership)
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/YourUsername/MockMate.git](https://github.com/YourUsername/MockMate.git)
+    cd MockMate
+    ```
 
-📝 Instant Feedback Loop: No more guessing. Get immediate critique on your technical accuracy and communication style.
+2.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-🔐 Secure Architecture: Uses Streamlit Secrets management to handle API keys securely in the cloud.
+3.  **Set up API Key**
+    * Create a `.streamlit` folder.
+    * Create a `secrets.toml` file inside it.
+    * Add your key: `GEMINI_API_KEY = "AIzaSy..."`
 
-🛠️ Tech Stack
+4.  **Run the App**
+    ```bash
+    streamlit run app.py
+    ```
 
-LLM Engine: Google Gemini 2.0 Flash (via google-generativeai)
+---
 
-Frontend: Streamlit (Python)
+## 🤝 Future Scope
+* **Voice Mode:** Speak your answers instead of typing (Speech-to-Text).
+* **Coding Sandbox:** A built-in code editor to solve DSA problems live.
+* **History:** Save past interview scores to track progress.
 
-Styling: Custom CSS / HTML Injection
+---
 
-Data Processing: PyPDF2
-
-⚙️ Installation & Local Run
-
-Clone the project to run it on your local machine.
-
-# 1. Clone the repository
-git clone [https://github.com/YourUsername/MockMate.git](https://github.com/YourUsername/MockMate.git)
-
-# 2. Navigate to directory
-cd MockMate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the app
-streamlit run app.py
-
-
-Setting up the API Key
-
-Get your free key from Google AI Studio.
-
-Create a folder .streamlit and a file secrets.toml inside it:
-
-# .streamlit/secrets.toml
-GEMINI_API_KEY = "Your_AIzaSy_Key_Here"
-
-
-🔮 Future Scope
-
-Voice Mode: Adding Speech-to-Text to conduct verbal interviews.
-
-Coding Sandbox: Integrating a code editor to run Python/C++ code for DSA questions.
-
-History Tracking: Saving previous interview scores to track progress over time.
-
-<div align="center">
-<sub>Built with ❤️ by Vikas Kashyap</sub>
-</div>
+**Made with ❤️ by Vikas Kashyap**
